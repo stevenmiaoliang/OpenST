@@ -2,9 +2,9 @@ import numpy as np
 from PIL import Image
 from matplotlib.pyplot import *
 
-def stOpen(filePath,mode):
+def stOpen(filePath):
     try:
-        pil_im = Image.open(filePath, mode)
+        pil_im = Image.open(filePath)
     except IOError:
         raise ValueError("File: "+filePath + " Open Error ")
     im = np.array(pil_im)
